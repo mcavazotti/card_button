@@ -1,7 +1,6 @@
 name: card_button
 description: A simple, flexible and pretty button based on the Card widget.
 version: 0.0.1
-author: mcavazotti
 homepage: https://github.com/mcavazotti
 
 environment:
