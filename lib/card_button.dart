@@ -47,36 +47,42 @@ class CardButton extends StatelessWidget {
       height: height,
       width: width,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(5)), boxShadow: <BoxShadow>[BoxShadow(color: Colors.black12, offset: Offset(1, 2))]),
+          borderRadius: BorderRadius.all(Radius.circular(5)),
+          boxShadow: <BoxShadow>[
+            BoxShadow(color: Colors.black12, offset: Offset(1, 2))
+          ]),
       child: Material(
           color: Theme.of(context).cardColor,
           child: InkWell(
-            child: Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-              if (visualHeader != null) visualHeader,
-              Padding(
-                  padding: EdgeInsets.only(left: 10, right: 10, bottom: 3, top: 3),
-                  child: Column(
-                    children: <Widget>[
-                      Text(
-                        title,
-                        textAlign: TextAlign.center,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: description == null ? 2 : 1,
-                        style: _textStyle,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      if (description != null)
-                        Text(
-                          description,
-                          style: Theme.of(context).textTheme.caption,
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 2,
-                        )
-                    ],
-                  )),
-            ]),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  if (visualHeader != null) visualHeader,
+                  Padding(
+                      padding: EdgeInsets.only(
+                          left: 10, right: 10, bottom: 3, top: 3),
+                      child: Column(
+                        children: <Widget>[
+                          Text(
+                            title,
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: description == null ? 2 : 1,
+                            style: _textStyle,
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          if (description != null)
+                            Text(
+                              description,
+                              style: Theme.of(context).textTheme.caption,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                            )
+                        ],
+                      )),
+                ]),
             onTap: onTap,
           )),
     );
