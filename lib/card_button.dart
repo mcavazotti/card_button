@@ -2,16 +2,17 @@ library card_button;
 
 import 'package:flutter/material.dart';
 
-
 /// A material button based on a Card. This widget can have an image or icon, a title and a small description.
 /// [image] will be ignored if a [icon] is provided
 class CardButton extends StatelessWidget {
   final String title;
   final String description;
+
   /// This argument is typed as a generic Widget to allow flexibility
   final Widget image;
   final IconData icon;
   final double height, width;
+
   /// Optional style for the [title]. If none is provided, the title will be styled as a header6
   final TextStyle textStyle;
   final void Function() onTap;
